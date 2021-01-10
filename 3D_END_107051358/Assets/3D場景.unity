@@ -737,8 +737,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f59b2bb6fdd127d4384a2be928ce44e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  date: {fileID: 11400000, guid: f42a5cf18199f43438626aa6f5a61c55, type: 2}
+  data: {fileID: 11400000, guid: f42a5cf18199f43438626aa6f5a61c55, type: 2}
+  dialogue: {fileID: 217453843}
+  textContent: {fileID: 2015335939}
+  textName: {fileID: 1169502991}
+  interval: 0.1
   playerInArea: 0
+  state: 1
 --- !u!1 &887988939
 GameObject:
   m_ObjectHideFlags: 0
@@ -1018,7 +1023,7 @@ PrefabInstance:
     - target: {fileID: -927199367670048503, guid: 82a2914d8f86c62488456950c8330e38,
         type: 3}
       propertyPath: m_Name
-      value: "\u6A5F\u5668\u4EBA\u7F8E\u7709NPC"
+      value: "\u6A5F\u5668\u4EBA\u7F8E\u7709"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 82a2914d8f86c62488456950c8330e38, type: 3}
@@ -1224,8 +1229,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1946575095}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.109, z: 0}
-  m_LocalScale: {x: 3.2495, y: 3.2495, z: 3.2495}
+  m_LocalPosition: {x: 0, y: -0.162, z: 0}
+  m_LocalScale: {x: 3.5851734, y: 3.5851734, z: 3.5851734}
   m_Children: []
   m_Father: {fileID: 1174931125}
   m_RootOrder: 26
