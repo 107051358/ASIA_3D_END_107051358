@@ -14,14 +14,14 @@ public class NPC : MonoBehaviour
     public Text textName;
     [Header("對話間隔")]
     public float interval = 0.2f;
-
-    public bool playerInArea;
-
+    
     public enum NPCState
     {
         FirstDialogue,Missing,Finish
     }
     public NPCState state = NPCState.FirstDialogue;
+
+    public bool playerInArea;
 
     private void OnTriggerEnter(Collider other)
     {

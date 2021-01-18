@@ -30,21 +30,26 @@ public class Enemy : MonoBehaviour
         nav.speed = speed;
         nav.stoppingDistance = stopDistence;
     }
+
     private void Update()
     {
         Track();
         Attack();
     }
+
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
         Gizmos.DrawRay(atkPoint.position, atkPoint.forward * atkLength);
     }
+
     private RaycastHit hit;
+
     private void Attack()
     {
         if (nav.remainingDistance < stopDistence)
         {
+            timer += Time.deltaTime;
             Vector3 pos = player.position;
             pos.y = transform.position.y;
             transform.LookAt(pos);
@@ -61,6 +66,23 @@ public class Enemy : MonoBehaviour
             
         }
     }
+
+    private float hp = 100;
+
+    public void Damage(float damage)
+    {
+        hp -= damage;
+        ani.SetTrigger("受傷觸發");
+        if (hp <= 0) Dead();
+    }
+
+    private void Dead()
+    {
+        nav.isStopped = true;
+        enabled = false;
+        ani.SetBool("死亡開關", true);
+    }
+
     private void Track()
     {
         nav.SetDestination(player.position);
